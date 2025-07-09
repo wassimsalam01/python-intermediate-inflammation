@@ -51,6 +51,17 @@ def test_daily_max_integers():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_max(test_input), test_result)
 
+def test_daily_min_zeros():
+    """Test that min function works for an array of zeros."""
+
+    test_input = np.array([[0, 0],
+                           [0, 0],
+                           [0, 0]])
+    test_result = np.array([0, 0])
+
+    # Need to use Numpy testing functions to compare arrays
+    npt.assert_array_equal(daily_min(test_input), test_result)
+
 def test_daily_min_integers():
     """Test that min function works for an array of positive integers."""
 
